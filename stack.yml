@@ -12,15 +12,8 @@ services:
     volumes:
       - "/var/docker/chronograf/data:/var/lib/chronograf"
     networks:
-      - chronografnet
-      - influxdbnet
-      - kapacitornet
+      - online
 networks:
-  chronografnet:
-    name: chronografnet
-  influxdbnet:
+  online:
     external: true
-    name: influxdbnet
-  kapacitornet:
-    external: true
-    name: kapacitornet
+    name: online
